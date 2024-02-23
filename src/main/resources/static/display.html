@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Display</title>
+    <style>
+        .student {
+
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Students Display</h1>
+
+<!-- Iterate through each student and display as a rectangle -->
+<div th:each="student : ${students}">
+    <div class="student" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;'">
+        <p th:text="${student.name}"></p>
+    </div>
+</div>
+</body>
+</html>
