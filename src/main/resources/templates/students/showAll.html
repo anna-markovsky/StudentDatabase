@@ -11,22 +11,21 @@
 </head>
 <body>
 <main class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-4">
+    <div class="row-justify-center">
+        <div class="col-md-10">
             <h1>Displaying students here:</h1>
-            <ul>
 
-                    <li th:each="student : ${st}" class="student" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;border: 1px solid ' + ${student.colour} + ' ;'">
+                    <div th:each="student : ${st}" class="student" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;border: 1px solid ' + ${student.colour} + ' ;'">
                         <span th:text="${student.name}"></span>
                         <span th:text="${student.weight}"></span> -
                         <span th:text="${student.height}"></span> -
                         <span th:text="${student.colour}"></span> -
                         <span th:text="${student.gpa}"></span>
                         <a href="/delete.html">Delete  </a>
-                        <a href="/change.html">   Update</a>
+                        <a href="/students/update">   Update</a>
 
-                    </li>
-            </ul>
+                    </div>
+
         </div>
     </div>
 </main>

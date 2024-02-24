@@ -11,7 +11,8 @@
     <h1 class="mt-5 mb-4">Edit Student Attributes</h1>
 
     <form action="/students/asn2" method="post" th:object="${student}">
-        <input type="hidden" th:field="*{student.id}" />
+        <input type="hidden" th:field="*{id}" />
+
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" id="name" name="name" class="form-control" th:value="${student.name}" required />
