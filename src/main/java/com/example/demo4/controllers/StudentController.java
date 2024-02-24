@@ -39,7 +39,9 @@ public class StudentController {
         int newHeight = Integer.parseInt(newstudent.get("height"));
         String newColour = newstudent.get("colour");
         int newGpa = Integer.parseInt(newstudent.get("gpa"));
+
         studentRepo.save(new Student(newName, newWeight, newHeight, newColour, newGpa));
+
         response.setStatus(201);
         return "students/addedStudent";
     }
@@ -64,7 +66,6 @@ public class StudentController {
             return "students/addedStudent";
         } else {
             response.setStatus(404); // Not Found
-            model.addAttribute("message", "student not found. Please try again");
             return "redirect:/delete.html";
         }
     }

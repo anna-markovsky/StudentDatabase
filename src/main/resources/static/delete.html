@@ -14,28 +14,26 @@
             <h1 class="text-center mt-5 mb-4">Delete Student</h1>
             <form action="/students/delete" method="post">
                 <div class="mb-3">
-                    <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Username">
+                    <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Name" required>
                 </div>
                 <div class="mb-3">
-                    <input type="number" id="weight" name="weight" class="form-control form-control-lg" placeholder="Weight">
+                    <input type="number" id="weight" name="weight" class="form-control form-control-lg" placeholder="Weight" required>
                 </div>
                 <div class="mb-3">
-                    <input type="number" id="height" name="height" class="form-control form-control-lg" placeholder="Height">
+                    <input type="number" id="height" name="height" class="form-control form-control-lg" placeholder="Height" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" id="colour" name="colour" class="form-control form-control-lg" placeholder="Colour">
+                    <input type="text" id="colour" name="colour" class="form-control form-control-lg" placeholder="Hair Colour" required>
                 </div>
                 <div class="mb-3">
-                    <input type="number" id="gpa" name="gpa" class="form-control form-control-lg" placeholder="Gpa">
+                    <input type="number" id="gpa" name="gpa" class="form-control form-control-lg" placeholder="Gpa" required>
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-danger" type="submit">DELETE</button>
+                    <button class="btn btn-danger" type="submit">Delete student</button>
                 </div>
 
             </form>
-            <div th:if="${message}" class="alert alert-danger text-center" role="alert">
-                <p th:text="${message}"></p>
-            </div>
+
         </div>
     </div>
 </div>
