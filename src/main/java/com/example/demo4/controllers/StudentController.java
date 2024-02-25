@@ -100,7 +100,7 @@ public class StudentController {
         } else {
             // If no students are found, you might want to handle that scenario
             // For simplicity, redirecting back to the search page
-            return "redirect:/students/update.html";
+            return "redirect:/students/update";
         }
     }
 
