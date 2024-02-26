@@ -11,5 +11,5 @@ If the student with the attributes entered doesn't exist, the webpage clears the
 The user can choose which values they would like to update ir leave certain features as they were before. The page will then redirect you to the display page if the update was successful. If not, it returns to the home page.
 6. Lastly, if the user selects the display students button, they are displayed a variety of rectangles, each corresponding to a student (the length and width are equal to the height and weight of those students). The border colour is based on that student's hair colour (ex brown border for brown hair). Each student rectangle also contains links to return to the delete or the update forms.
 7. This page also contains a link to click, in order to navigate back to home.
-8. 
+
   
