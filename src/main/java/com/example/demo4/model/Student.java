@@ -12,14 +12,14 @@ public class Student {
     private int weight;
     private int height;
     private String colour;
-    private int gpa;
+    private float gpa;
 
     // Constructors, getters, setters
 
     public Student() {
     }
 
-    public Student(String name, int weight, int height, String colour, int gpa) {
+    public Student(String name, int weight, int height, String colour, float gpa) {
         this.name = name;
         this.weight = weight;
         this.height = height;
@@ -51,10 +51,10 @@ public class Student {
         this.colour = colour;
     }
 
-    public int getGpa(){
+    public float getGpa(){
         return gpa;
     }
-    public void setGpa(int gpa){
+    public void setGpa(float gpa){
         this.gpa=gpa;
     }
     public int getId() {

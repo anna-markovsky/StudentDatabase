@@ -14,17 +14,22 @@
     <div class="row-justify-center">
         <div class="col-md-10">
             <h1>Displaying students here:</h1>
+            <a href="/home.html">Click here to return home!</a>
 
-                    <div th:each="student : ${st}" class="student" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;border: 1px solid ' + ${student.colour} + ' ;'">
-                        <span th:text="${student.name}"></span>
-                        <span th:text="${student.weight}"></span> -
-                        <span th:text="${student.height}"></span> -
-                        <span th:text="${student.colour}"></span> -
-                        <span th:text="${student.gpa}"></span>
-                        <a href="/delete.html">Delete  </a>
-                        <a href="/students/update">   Update</a>
+            <div th:each="student : ${st}" class="student" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;border: 1px solid ' +
+                (${student.colour} == 'blond' ? 'yellow' :
+                (${student.colour} == 'brunette' ? 'brown' :
+                (${student.colour} == 'ginger' ? 'orange' : ${student.colour}))) + ' ;'">
 
-                    </div>
+
+                <span th:text="${student.name}"></span>
+                <span th:text="${student.weight}"></span>
+                <span th:text="${student.height}"></span>
+                <span th:text="${student.colour}"></span>
+                <span th:text="${student.gpa}"></span>
+                <a href="/delete.html">Delete  </a>
+                <a href="/students/update">   Update</a>
+            </div>
 
         </div>
     </div>

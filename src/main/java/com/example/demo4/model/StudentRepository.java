@@ -11,20 +11,11 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     List<Student> findByHeight(int height);
 
-    List<Student> findByGpa(int gpa);
+    List<Student> findByGpa(float gpa);
 
-    List<Student> findByNameAndWeightAndHeightAndColourAndGpa(String name,int weight,int height, String colour,int gpa);
+    List<Student> findByNameAndWeightAndHeightAndColourAndGpa(String name,int weight,int height, String colour,float gpa);
 
-    @Transactional
-    @Modifying
-    @Query("DELETE FROM Student s WHERE s.name = :name AND s.weight = :weight AND s.height = :height AND s.colour = :colour AND s.gpa = :gpa")
-    void deleteByNameAndWeightAndHeightAndColourAndGpa(
-            @Param("name") String name,
-            @Param("weight") int weight,
-            @Param("height") int height,
-            @Param("colour") String colour,
-            @Param("gpa") int gpa
-    );
+
 /*
     @Transactional
     @Modifying
